@@ -1,0 +1,16 @@
+VEHICLE ACCIDENT DETECTION REPORT
+=================================
+Generated at: 2026-10-27T19:10:38.128418800
+
+Scenario 1 | Acceleration: 2.0 | Impact: 1.0 | Event: NORMAL
+Scenario 2 | Acceleration: 5.5 | Impact: 2.0 | Event: SUDDEN IMPACT
+Scenario 3 | Acceleration: 9.0 | Impact: 8.0 | Event: POSSIBLE ACCIDENT
+Scenario 4 | Acceleration: 2.0 | Impact: 5.0 | Event: SUDDEN IMPACT
+Scenario 5 | Acceleration: 7.0 | Impact: 6.0 | Event: SUDDEN IMPACT
+
+EVENT SUMMARY
+=============
+Normal Events: 1
+Sudden Impact Events: 3
+Possible Accidents: 1
+Total Scenarios: 5
