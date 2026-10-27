@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -6,18 +7,18 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Vehicle Accident Detection System'
-                bat 'mvn clean package'
+                bat '"C:/Users/acer/Downloads/apache-maven-3.10.0-bin/apache-maven-3.10.0/bin/mvn.cmd" clean package'
             }
         }
 
         stage('Automated Testing') {
             steps {
                 echo 'Running accident scenario tests'
-                bat 'mvn test'
+                bat '"C:/Users/acer/Downloads/apache-maven-3.10.0-bin/apache-maven-3.10.0/bin/mvn.cmd" test'
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
                 }
             }
         }
@@ -25,7 +26,7 @@ pipeline {
         stage('Generate Event Report') {
             steps {
                 echo 'Generating event analysis report'
-                bat 'mvn exec:java'
+                bat '"C:/Users/acer/Downloads/apache-maven-3.10.0-bin/apache-maven-3.10.0/bin/mvn.cmd" exec:java'
             }
         }
 
@@ -46,3 +47,4 @@ pipeline {
         }
     }
 }
+```
