@@ -1,20 +1,11 @@
-```groovy
 pipeline {
     agent any
 
     stages {
-
-        stage('Build') {
+        stage('Build and Test') {
             steps {
-                echo 'Building Vehicle Accident Detection System'
+                echo 'Building and testing Vehicle Accident Detection'
                 bat '"C:/Users/acer/Downloads/apache-maven-3.10.0-bin/apache-maven-3.10.0/bin/mvn.cmd" clean package'
-            }
-        }
-
-        stage('Automated Testing') {
-            steps {
-                echo 'Running accident scenario tests'
-                bat '"C:/Users/acer/Downloads/apache-maven-3.10.0-bin/apache-maven-3.10.0/bin/mvn.cmd" test'
             }
             post {
                 always {
@@ -47,4 +38,3 @@ pipeline {
         }
     }
 }
-```
